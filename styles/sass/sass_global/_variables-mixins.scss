@@ -1,0 +1,55 @@
+$primary-color: #414141;
+$light-color: #F9F9F9;
+$grey-color: #828282;
+$dark-color: #535357;
+$box-color: #5c5b5b;
+$line-gradient: linear-gradient(90deg, #3c3c3d 0%, #3a393a 92.32%);
+$btn-gradient: linear-gradient(90deg, rgba(100, 100, 100, 0.8) 0.2%, rgba(49, 49, 49, 0.648) 100%);
+$reverse-btn-gradient: linear-gradient(90deg, rgba(53, 53, 53, 0.648) 100%, rgba(116, 116, 116, 0.8) 0.2%);
+$transparent: rgba(250, 247, 247, 0.65);
+$gutter: 2.5rem;
+
+@mixin font($type){
+
+    @if $type == 'dmsans' {
+        font-family: 'DM Sans', sans-serif;
+    } @else if $type == 'poppins' {
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+}
+
+@mixin responsive($device) {
+
+    @if $device == mobile {
+        @media (max-width: 480px) {
+            @content;
+
+        }
+
+    } @else if $device == verticalphone {
+        @media (max-width: 660px) {
+            @content;
+
+        }
+
+    } @else if $device == tablet {
+        @media (max-width: 860px) {
+            @content;
+        }
+
+    } @else if $device == tabletplus {
+        @media (max-width: 992px) {
+            @content;
+        }
+
+    } @else if $device == notebook {
+        @media (max-width: 1200px) {
+            @content;
+
+        }
+
+    }
+
+}
