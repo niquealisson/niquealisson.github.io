@@ -116,50 +116,72 @@ const initScrollSmooth = () => {
 
 initScrollSmooth()
 
+// Language (EN / PT)
+
+const TEXTS = {
+    en: { hello: 'Hi, I\'m ', name: 'Nique Souza', role: 'QA Engineer · ISTQB® CTFL 4.0' },
+    pt: { hello: 'Olá, eu sou ', name: 'Nique Souza', role: 'QA Engineer · ISTQB® CTFL 4.0' }
+}
+
+const getSavedLang = () => {
+    try {
+        const saved = localStorage.getItem('lang')
+        if (saved === 'en' || saved === 'pt') return saved
+    } catch (e) {}
+    return navigator.language && navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en'
+}
+
+let currentLang = getSavedLang()
+
+const applyLang = (lang) => {
+    currentLang = lang
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
+    document.documentElement.dataset.lang = lang
+    try { localStorage.setItem('lang', lang) } catch (e) {}
+}
+
+applyLang(currentLang)
+
 // Typing Animation
 
 const initTypingAnimation = () => {
     const title = document.querySelector('#sobre .banner h1')
-    const span = document.querySelector('#sobre .banner span')
-    const paragraph = document.querySelector('#sobre .banner p')
+    const span = document.querySelector('#sobre .banner .title > span')
+    const paragraph = document.querySelector('#sobre .banner .title p')
+    let timers = []
 
-    const typingAnimation = (element) => {
-
-        if (element == title) {
-            element.innerHTML = 'Olá, eu sou '
-            const textToArray = element.innerHTML.split('')
-            element.innerHTML = ''
-
-            textToArray.forEach((item, index) => {
-                setTimeout(() => element.innerHTML += item, 120 * index)
-            })
-
-        } else if (element == span) {
-            element.innerHTML = 'Nique Alisson :D'
-            const textToArray = element.innerHTML.split('')
-            element.innerHTML = ''
-
-            textToArray.forEach((item, index) => {
-                setTimeout(() => element.innerHTML += item, 150 * index)
-            })
-
-        } else {
-            element.innerHTML = 'Analista de Testes e QA'
-            const textToArray = element.innerHTML.split('')
-            element.innerHTML = ''
-
-            textToArray.forEach((item, index) => {
-                setTimeout(() => element.innerHTML += item, 75 * index)
-            })
-
-        }
-        
+    const type = (element, text, speed, delay) => {
+        text.split('').forEach((char, index) => {
+            timers.push(setTimeout(() => element.textContent += char, delay + speed * index))
+        })
     }
 
-    typingAnimation(title)
-    setTimeout(() => typingAnimation(span), 1600)
-    setTimeout(() => typingAnimation(paragraph), 3700)
+    const run = (animate) => {
+        timers.forEach(clearTimeout)
+        timers = []
+        const t = TEXTS[currentLang]
 
+        if (!animate) {
+            title.textContent = t.hello
+            span.textContent = t.name
+            paragraph.textContent = t.role
+            return
+        }
+
+        title.textContent = ''
+        span.textContent = ''
+        paragraph.textContent = ''
+        type(title, t.hello, 120, 0)
+        type(span, t.name, 150, 1600)
+        type(paragraph, t.role, 60, 3600)
+    }
+
+    run(true)
+
+    document.querySelector('.lang-switch').addEventListener('click', () => {
+        applyLang(currentLang === 'en' ? 'pt' : 'en')
+        run(false)
+    })
 }
 
 initTypingAnimation()

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qk6Sv7s_z-kzYtHiCVe1-9lr6BCjC1-II9k5V7Lt3c4" />
-    <title>Portfólio | Nique Alisson QA </title>
+    <meta name="description" content="Nique Souza — QA Engineer (ISTQB CTFL 4.0). Test automation for web, mobile and APIs with Cypress, Playwright, Appium and Maestro.">
+    <title>Nique Souza | QA Engineer</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/portfolio.css">
     <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/modal.js"></script>
 </head>
 <body>
 
@@ -21,13 +22,18 @@
                 <i class="ri-close-line hidden"></i>
             </div>
             <a href="#sobre">
-                <h2>Portfólio</h2>
-            </a>    
-            <div class="toggle">
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <label for="checkbox" class="label">
-                    <div class="box"></div>
-                </label>
+                <h2>Nique Souza</h2>
+            </a>
+            <div class="header-actions">
+                <button type="button" class="lang-switch" aria-label="Mudar idioma / Change language">
+                    <span data-for="en">EN</span><span data-for="pt">PT</span>
+                </button>
+                <div class="toggle">
+                    <input type="checkbox" name="checkbox" id="checkbox" aria-label="Light mode">
+                    <label for="checkbox" class="label">
+                        <div class="box"></div>
+                    </label>
+                </div>
             </div>
         </div>
     </header>
@@ -37,121 +43,334 @@
             <div class="banner">
                 <div class="intro">
                     <div class="title">
-                        <h1></h1> 
+                        <h1></h1>
                         <span></span>
                         <p></p>
                     </div>
                     <div class="actions">
-                        <a href="assets/cv/CV-Nique-Alisson-P-Souza-PT .pdf" download>Download CV</a>
-                        <a href="mailto:niquealissonqa@gmail.com" target="_blank">Entrar em contato</a>
+                        <a href="assets/cv/CV-Nique-Souza-QA-EN.pdf" download>
+                            <span data-l="en">Download CV</span><span data-l="pt">Baixar CV</span>
+                        </a>
+                        <a href="mailto:niquealissonqa@gmail.com" target="_blank">
+                            <span data-l="en">Get in touch</span><span data-l="pt">Entrar em contato</span>
+                        </a>
                     </div>
                 </div>
                 <div class="profile">
-                    <img src="assets/avatar222.png" alt="avatar">
+                    <img src="assets/avatar222.png" alt="Nique Souza">
                 </div>
             </div>
+
+            <ul class="facts">
+                <li>
+                    <strong>5+</strong>
+                    <span data-l="en">years in software testing</span>
+                    <span data-l="pt">anos com testes de software</span>
+                </li>
+                <li>
+                    <strong>Web · Mobile · API</strong>
+                    <span data-l="en">automation across the stack</span>
+                    <span data-l="pt">automação em todas as camadas</span>
+                </li>
+                <li>
+                    <strong>ISTQB® CTFL 4.0</strong>
+                    <span data-l="en">certified tester</span>
+                    <span data-l="pt">certificação de testes</span>
+                </li>
+                <li>
+                    <strong>Porto, PT</strong>
+                    <span data-l="en">open to hybrid &amp; remote</span>
+                    <span data-l="pt">aberto a híbrido e remoto</span>
+                </li>
+            </ul>
+
             <div class="about">
-                <h2>Sobre mim</h2>
-                <p> 25 anos, Bacharelado em Sistemas de Informação. <br>
-                    Sou um Analista de Testes QA, com 1,7 anos de experiência estagiando e 
-                    trabalhando com tecnologia.
-                    Como QA busquei aprender técnicas que baseiam a 
-                    disciplina de testes, crio documentações e artefatos de testes, posso auxiliar 
-                    em testes unitários, realizo testes funcionais manuais e checagens 
-                    automatizados para Web com Cypress, Selenium Webdriver ou RobotFramework. Testes de API 
-                    com cypress ou postman, testes não funcionais como os de performance com 
-                    K6. Também faço apresentações para o time sobre temas ligados a qualidade, para assim 
-                    criarmos um time cada vez mais maduro e conectado com a qualidade de 
-                    software.
-                    Estou constantemente estudando conteúdo de testes e tecnologia e 
-                    participando de comunidades como a Asociación for Software Testing.<br>
+                <h2><span data-l="en">About me</span><span data-l="pt">Sobre mim</span></h2>
+                <p data-l="en">
+                    QA Engineer based in Porto, Portugal. I started testing in 2021 as an intern in Brazil,
+                    went through banking systems at Banco BV, and today I test web and mobile products at
+                    CEiiA&nbsp;/&nbsp;BEN4US. I design automation strategies for web, mobile and APIs, wire
+                    them into CI pipelines and keep every test traceable in Jira.
+                    Outside work I build and test my own products end to end, which taught me to look at
+                    quality from the developer's side too.
+                </p>
+                <p data-l="pt">
+                    QA Engineer morando no Porto, Portugal. Comecei com testes em 2021 como estagiário no
+                    Brasil, passei por sistemas bancários no Banco BV e hoje testo produtos web e mobile na
+                    CEiiA&nbsp;/&nbsp;BEN4US. Desenho estratégias de automação para web, mobile e API, coloco
+                    tudo nas pipelines de CI e mantenho cada teste rastreável no Jira.
+                    Fora do trabalho eu construo e testo meus próprios produtos de ponta a ponta, o que me
+                    ensinou a enxergar qualidade também pelo lado de quem desenvolve.
                 </p>
             </div>
         </div>
     </section>
-    <section id="skills" class="js-section">
-        <div class="skills">
-            <div class="container">
-                <h2>Habilidades</h2>
-                <div class="cards">
-                    <div class="box">
-                        <p>Cypress</p>
-                        <img src="assets/mini-languages/cypress-svgrepo-com.svg" alt="javascript">
-                    </div>
-                    <div class="box">
-                        <p>Selenium</p>
-                        <img src="assets/mini-languages/icons8-automação-de-teste-de-selênio.svg" alt="javascript">
-                    </div>
-                    <div class="box">
-                        <p>JavaScript</p>
-                        <img src="assets/mini-languages/icons8-javascript.svg" alt="javascript">
-                    </div>
-                    <div class="box">
-                        <p>Java</p>
-                        <img src="assets/mini-languages/icons8-logo-java-coffee-cup.svg" alt="javascript">
-                    </div>
 
+    <section id="experience" class="js-section block">
+        <div class="container narrow">
+            <h2 class="block-title"><span data-l="en">Experience</span><span data-l="pt">Experiência</span></h2>
+
+            <ol class="timeline">
+                <li class="job current">
+                    <div class="job-head">
+                        <h3>Software Tester (QA Engineer)</h3>
+                        <p class="company">CEiiA / BEN4US · Matosinhos, Portugal</p>
+                        <p class="period"><span data-l="en">Apr 2026 – Present</span><span data-l="pt">Abr 2026 – Atual</span></p>
+                    </div>
+                    <ul data-l="en">
+                        <li>Automated web and mobile tests with Cypress, Playwright and Appium/Maestro (Java, Maven) on Android and iOS.</li>
+                        <li>API and contract testing from Swagger/OpenAPI specs with Postman, Apidog, Cypress and Playwright.</li>
+                        <li>Test cases and traceability in Jira + Testiny; QA processes documented in Confluence.</li>
+                        <li>Own source control and CI integration of the test suites in GitLab.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li>Automação de testes web e mobile com Cypress, Playwright e Appium/Maestro (Java, Maven) em Android e iOS.</li>
+                        <li>Testes de API e de contrato a partir de specs Swagger/OpenAPI com Postman, Apidog, Cypress e Playwright.</li>
+                        <li>Casos de teste e rastreabilidade no Jira + Testiny; processos de QA documentados no Confluence.</li>
+                        <li>Responsável pelo versionamento e pela integração das suítes de teste no CI do GitLab.</li>
+                    </ul>
+                    <div class="tags"><span>Cypress</span><span>Playwright</span><span>Appium</span><span>Maestro</span><span>Apidog</span><span>GitLab CI</span><span>Testiny</span></div>
+                </li>
+
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Test Analyst / QA</h3>
+                        <p class="company">DATUM · <span data-l="en">client</span><span data-l="pt">cliente</span> Banco BV (Banco Votorantim) · Remote</p>
+                        <p class="period"><span data-l="en">May 2025 – Mar 2026</span><span data-l="pt">Mai 2025 – Mar 2026</span></p>
+                    </div>
+                    <ul data-l="en">
+                        <li>QA for banking systems in a regulated financial environment, allocated full-time to Banco BV.</li>
+                        <li>BDD test scenarios automated with Cypress + Cucumber; API validation with Postman.</li>
+                        <li>SQL queries across multiple relational databases to validate test results.</li>
+                        <li>Automated tests integrated into Jenkins pipelines, versioned with Git and Bitbucket.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li>QA de sistemas bancários em ambiente financeiro regulado, alocado em tempo integral no Banco BV.</li>
+                        <li>Cenários BDD automatizados com Cypress + Cucumber; validação de API com Postman.</li>
+                        <li>Consultas SQL em vários bancos relacionais para validar os resultados dos testes.</li>
+                        <li>Testes automatizados integrados às pipelines do Jenkins, versionados com Git e Bitbucket.</li>
+                    </ul>
+                    <div class="tags"><span>Cypress</span><span>Cucumber</span><span>Postman</span><span>SQL</span><span>Jenkins</span><span>Bitbucket</span></div>
+                </li>
+
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Junior QA</h3>
+                        <p class="company">OléoPlan Nordeste · Brazil</p>
+                        <p class="period"><span data-l="en">Jan 2024 – Jun 2025</span><span data-l="pt">Jan 2024 – Jun 2025</span></p>
+                    </div>
+                    <ul data-l="en">
+                        <li>Web test automation with Cypress and Selenium; functional and non-functional testing.</li>
+                        <li>Regression testing, performance monitoring and test pipelines with Jenkins and Git.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li>Automação de testes web com Cypress e Selenium; testes funcionais e não funcionais.</li>
+                        <li>Testes de regressão, monitoramento de performance e pipelines de teste com Jenkins e Git.</li>
+                    </ul>
+                </li>
+
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Software QA Analyst</h3>
+                        <p class="company">Pipoca Ágil · Rio de Janeiro, Brazil</p>
+                        <p class="period"><span data-l="en">May 2023 – Oct 2023</span><span data-l="pt">Mai 2023 – Out 2023</span></p>
+                    </div>
+                    <ul data-l="en">
+                        <li>Regression automation with Cypress and Selenium, black-box and exploratory testing, root cause analysis.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li>Automação de regressão com Cypress e Selenium, testes caixa-preta e exploratórios, análise de causa raiz.</li>
+                    </ul>
+                </li>
+
+                <li class="job compact">
+                    <div class="job-head">
+                        <h3><span data-l="en">Internships</span><span data-l="pt">Estágios</span></h3>
+                        <p class="company">Sivirino.com · <span data-l="en">Bahia State Dept. of Science, Technology and Innovation</span><span data-l="pt">Secretaria de Ciência, Tecnologia e Inovação da Bahia</span></p>
+                        <p class="period">2021 – 2023</p>
+                    </div>
+                    <ul data-l="en">
+                        <li>Functional and acceptance testing, manual test cases, first automated scripts and test environment setup.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li>Testes funcionais e de aceite, casos de teste manuais, primeiros scripts automatizados e configuração de ambientes de teste.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="stack" class="js-section block">
+        <div class="container">
+            <h2 class="block-title"><span data-l="en">QA toolbox</span><span data-l="pt">Ferramentas de QA</span></h2>
+            <div class="stack-grid">
+                <div class="stack-group">
+                    <h3><i class="ri-window-line"></i> <span data-l="en">Web automation</span><span data-l="pt">Automação web</span></h3>
+                    <p>Cypress · Playwright · Selenium WebDriver · Cucumber (BDD)</p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-smartphone-line"></i> <span data-l="en">Mobile automation</span><span data-l="pt">Automação mobile</span></h3>
+                    <p>Appium · Maestro · Android &amp; iOS · <span data-l="en">OCR / OpenCV visual testing</span><span data-l="pt">testes visuais com OCR / OpenCV</span></p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-plug-line"></i> <span data-l="en">API testing</span><span data-l="pt">Testes de API</span></h3>
+                    <p>Postman · Apidog · Swagger / OpenAPI · Playwright <code>request</code> · cypress-plugin-api</p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-git-branch-line"></i> <span>CI/CD &amp; <span data-l="en">version control</span><span data-l="pt">versionamento</span></span></h3>
+                    <p>Jenkins · GitLab CI · GitHub Actions · Git · GitHub · GitLab · Bitbucket</p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-task-line"></i> <span data-l="en">Test management</span><span data-l="pt">Gestão de testes</span></h3>
+                    <p>Jira · Testiny · Confluence · Trello · <span data-l="en">JUnit reports</span><span data-l="pt">relatórios JUnit</span></p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-code-s-slash-line"></i> <span data-l="en">Languages &amp; data</span><span data-l="pt">Linguagens e dados</span></h3>
+                    <p>JavaScript · TypeScript · Java (Maven) · SQL (PostgreSQL, MySQL)</p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-compass-3-line"></i> <span data-l="en">Methods</span><span data-l="pt">Métodos</span></h3>
+                    <p>BDD · TDD · ATDD · <span data-l="en">risk-based testing</span><span data-l="pt">testes baseados em risco</span> · Agile / Scrum</p>
+                </div>
+                <div class="stack-group">
+                    <h3><i class="ri-speed-line"></i> <span data-l="en">Non-functional</span><span data-l="pt">Não funcionais</span></h3>
+                    <p>K6 <span data-l="en">(performance)</span><span data-l="pt">(performance)</span> · <span data-l="en">exploratory testing</span><span data-l="pt">testes exploratórios</span></p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="projects" class="js-section">
+
+    <section id="qa-projects" class="js-section block">
         <div class="container">
-            <h2>Projetos</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="iframe-container">
-                <h2>Cypress</h2>
-                <br>
-                <br>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/TUjnd6om5k8?si=osTBgCa29RORmbjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>Selenium</h2>
-                <br>
-                <br>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/A1zFwgkLamw?si=OGaUySyo0VzyrWBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/RNxt0-Gd9tk?si=FX46EoFC0YVYJLba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/A1zFwgkLamw?si=OGaUySyo0VzyrWBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>Postman</h2>
-                <br>
-                <br>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>K6</h2>
-                <br>
-                <br>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="280" src="https://www.youtube.com/embed/NY5KLaPkgXg?si=OOlrRY1tqM_pL042" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h2 class="block-title"><span data-l="en">QA projects</span><span data-l="pt">Projetos de QA</span></h2>
+            <p class="block-lead">
+                <span data-l="en">What I built, why, and the testing ideas behind it.</span>
+                <span data-l="pt">O que eu construí, por quê, e as ideias de teste por trás.</span>
+            </p>
+
+            <article class="case featured">
+                <figure class="case-media">
+                    <img src="assets/projects/visual-e2e.gif" alt="Annotated run: OCR boxes, the target found and the tap point" loading="lazy">
+                </figure>
+                <div class="case-body">
+                    <p class="case-kicker"><span data-l="en">Mobile E2E framework</span><span data-l="pt">Framework de E2E mobile</span></p>
+                    <h3>visual-e2e</h3>
+                    <p class="case-sub" data-l="en">Mobile tests that read the screen like a user does: OCR + OpenCV, zero testIDs, zero sleeps.</p>
+                    <p class="case-sub" data-l="pt">Testes mobile que leem a tela como o usuário: OCR + OpenCV, zero testIDs, zero sleeps.</p>
+                    <ul data-l="en">
+                        <li><strong>Problem:</strong> mobile E2E suites break on selectors and hard waits, and green tests can still miss real bugs.</li>
+                        <li><strong>What I built:</strong> a TypeScript layer on Appium where text is found by PaddleOCR and icons by OpenCV template matching, rendered straight from the app's own icon font.</li>
+                        <li><strong>Testing ideas:</strong> every action must carry an assertion, the assertion must be false <em>before</em> the action (so a tap that does nothing fails), and waiting means re-reading the screen, never <code>sleep</code>.</li>
+                        <li>Runs against a real running app with simulated GPS routes. Inspired by Shopify Engineering's “98% stable” article.</li>
+                    </ul>
+                    <ul data-l="pt">
+                        <li><strong>Problema:</strong> suítes E2E mobile quebram por seletor e espera fixa, e teste verde ainda deixa passar bug real.</li>
+                        <li><strong>O que construí:</strong> uma camada em TypeScript sobre o Appium que acha textos com PaddleOCR e ícones com template matching do OpenCV, renderizados direto da fonte de ícones do próprio app.</li>
+                        <li><strong>Ideias de teste:</strong> toda ação precisa de uma asserção, a asserção tem que ser falsa <em>antes</em> da ação (toque que não faz nada falha) e esperar é reler a tela, nunca <code>sleep</code>.</li>
+                        <li>Roda contra um app de corrida de verdade, com rotas de GPS simuladas. Inspirado no artigo “98% stable” da Shopify Engineering.</li>
+                    </ul>
+                    <div class="tags"><span>TypeScript</span><span>Appium</span><span>PaddleOCR</span><span>OpenCV</span><span>Python</span></div>
+                    <p class="case-note"><i class="ri-time-line"></i> <span data-l="en">Repository coming soon</span><span data-l="pt">Repositório em breve</span></p>
+                </div>
+            </article>
+
+            <div class="case-grid">
+                <article class="case">
+                    <div class="case-body">
+                        <p class="case-kicker"><span data-l="en">API test architecture</span><span data-l="pt">Arquitetura de testes de API</span></p>
+                        <h3><span data-l="en">One REST API, two frameworks</span><span data-l="pt">Uma API REST, dois frameworks</span></h3>
+                        <ul data-l="en">
+                            <li>Full coverage of a marketplace API generated from its OpenAPI spec, written twice: <strong>43 Playwright</strong> tests and <strong>75 Cypress</strong> tests.</li>
+                            <li>Playwright side uses <strong>API Objects</strong> (one class per resource, 12 in total) and fixtures per role: user, admin and super-admin.</li>
+                            <li>Cypress side uses <code>cypress-plugin-api</code> so request and response show up inside the runner, which helps whoever is reading the bug report.</li>
+                            <li>Test cases and bugs follow a documented Testiny → Jira workflow.</li>
+                        </ul>
+                        <ul data-l="pt">
+                            <li>Cobertura de uma API de marketplace gerada a partir da spec OpenAPI, escrita duas vezes: <strong>43 testes em Playwright</strong> e <strong>75 em Cypress</strong>.</li>
+                            <li>O lado Playwright usa <strong>API Objects</strong> (uma classe por recurso, 12 no total) e fixtures por papel: usuário, admin e super-admin.</li>
+                            <li>O lado Cypress usa <code>cypress-plugin-api</code> para request e response aparecerem dentro do runner, o que ajuda quem lê o bug.</li>
+                            <li>Casos de teste e bugs seguem um fluxo documentado Testiny → Jira.</li>
+                        </ul>
+                        <div class="tags"><span>Playwright</span><span>Cypress</span><span>TypeScript</span><span>OpenAPI</span><span>Testiny</span></div>
+                        <p class="case-note"><i class="ri-lock-line"></i> <span data-l="en">Professional work, private code</span><span data-l="pt">Trabalho profissional, código privado</span></p>
+                    </div>
+                </article>
+
+                <article class="case">
+                    <div class="case-body">
+                        <p class="case-kicker"><span data-l="en">Test reporting</span><span data-l="pt">Relatórios de teste</span></p>
+                        <h3>jira-test-sync</h3>
+                        <ul data-l="en">
+                            <li>A small home-made “Zephyr”: reads the JUnit XML produced by GitLab CI and pushes the results into Jira.</li>
+                            <li>Creates or updates one <strong>Test Case</strong> issue per test, using a stable Test Key so reruns update instead of duplicating.</li>
+                            <li>Groups each pipeline run into a <strong>Test Cycle</strong>, so the team sees what ran, what failed and when, without leaving Jira.</li>
+                        </ul>
+                        <ul data-l="pt">
+                            <li>Um “Zephyr” caseiro: lê o JUnit XML gerado pelo GitLab CI e envia os resultados para o Jira.</li>
+                            <li>Cria ou atualiza uma issue de <strong>Test Case</strong> por teste, com uma Test Key estável para que novas execuções atualizem em vez de duplicar.</li>
+                            <li>Agrupa cada execução da pipeline num <strong>Test Cycle</strong>, então o time vê o que rodou, o que falhou e quando, sem sair do Jira.</li>
+                        </ul>
+                        <div class="tags"><span>Node.js</span><span>Jira REST API</span><span>GitLab CI</span><span>JUnit</span></div>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
+
+    <section id="built" class="js-section block">
+        <div class="container">
+            <h2 class="block-title"><span data-l="en">Products I built and tested</span><span data-l="pt">Produtos que construí e testei</span></h2>
+            <p class="block-lead">
+                <span data-l="en">Side projects where I was the developer and the QA, from the first screen to production.</span>
+                <span data-l="pt">Projetos paralelos onde fui o desenvolvedor e o QA, da primeira tela até produção.</span>
+            </p>
+            <div class="product-grid">
+                <article class="product">
+                    <h3>Ritmo</h3>
+                    <p data-l="en">Running app with goals, heart-rate zones, segments and a multiplayer “territory” game built on real GPS polygons. Also the test bed for visual-e2e.</p>
+                    <p data-l="pt">App de corrida com metas, zonas de frequência cardíaca, segmentos e um jogo multiplayer de “território” feito com polígonos reais de GPS. Também é o app onde o visual-e2e roda.</p>
+                    <div class="tags"><span>React Native</span><span>Expo</span><span>TypeScript</span><span>turf.js</span></div>
+                </article>
+                <article class="product">
+                    <h3>Escaninho</h3>
+                    <p data-l="en">Multi-tenant SaaS for motorcycle parts shops and workshops: stock, sales and service orders. Covered by 66 test files, including 12 browser system tests.</p>
+                    <p data-l="pt">SaaS multi-tenant para lojas de peças e oficinas de moto: estoque, vendas e ordens de serviço. Coberto por 66 arquivos de teste, incluindo 12 testes de sistema no navegador.</p>
+                    <div class="tags"><span>Ruby on Rails</span><span>PostgreSQL</span><span>Minitest</span><span>Capybara</span></div>
+                </article>
+                <article class="product">
+                    <h3><span data-l="en">Sales &amp; stock system</span><span data-l="pt">Sistema de vendas e estoque</span></h3>
+                    <p data-l="en">Web system running in production for a small food business: sales, stock, card installments and receipts, with database rules enforced by row-level security.</p>
+                    <p data-l="pt">Sistema web em produção para um pequeno negócio de alimentos: vendas, estoque, parcelamento no cartão e comprovantes, com regras de acesso garantidas por row-level security no banco.</p>
+                    <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Postgres RLS</span></div>
+                </article>
+                <article class="product">
+                    <h3><span data-l="en">WhatsApp finance assistant</span><span data-l="pt">Assistente financeiro no WhatsApp</span></h3>
+                    <p data-l="en">A household finance bot: expenses sent by text, audio or photo on WhatsApp land in a web dashboard with goals and budgets.</p>
+                    <p data-l="pt">Bot de finanças da casa: gastos mandados por texto, áudio ou foto no WhatsApp caem num painel web com metas e orçamentos.</p>
+                    <div class="tags"><span>Next.js</span><span>Supabase</span><span>Baileys (WhatsApp)</span><span>Gemini</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="js-section block">
+        <div class="container narrow">
+            <h2 class="block-title"><span data-l="en">Education &amp; certifications</span><span data-l="pt">Formação e certificações</span></h2>
+            <ul class="certs">
+                <li class="cert-main"><strong>ISTQB® Certified Tester Foundation Level (CTFL) 4.0</strong><span>2024</span></li>
+                <li><strong><span data-l="en">B.Sc. Information Systems</span><span data-l="pt">Bacharelado em Sistemas de Informação</span></strong><span>Unijorge · 2019 – 2022</span></li>
+                <li><strong><span data-l="en">Software Testing Program</span><span data-l="pt">Programa de Testes de Software</span></strong><span>Júlio de Lima · 2023</span></li>
+                <li><strong>Selenium WebDriver &amp; Java</strong><span>Inova Test · 2023</span></li>
+                <li><strong><span data-l="en">Functional Testing with Selenium WebDriver</span><span data-l="pt">Testes Funcionais com Selenium WebDriver</span></strong><span>Udemy · 2023</span></li>
+                <li><strong>Cypress: Direct to the Point</strong><span>Agilizei · 2023</span></li>
+            </ul>
         </div>
     </section>
 
     <section id="contacts" class="js-section">
         <div class="contacts">
             <div class="container">
-                <h2>Contatos</h2>
+                <h2><span data-l="en">Contact</span><span data-l="pt">Contato</span></h2>
                 <div class="icons">
                     <div class="icon">
                         <a href="mailto:niquealissonqa@gmail.com" target="_blank">
@@ -164,19 +383,6 @@
                         </a>
                         <a href="mailto:niquealissonqa@gmail.com" target="_blank">
                             <p>niquealissonqa@gmail.com</p>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://api.whatsapp.com/send?phone=5575999319863" target="_blank">
-                            <div class="box">
-                                <img src="assets/contacts/phone-svgrepo-com.svg" alt="telefone">
-                            </div>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=5575999319863" target="_blank">
-                            <p>Telefone</p>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=5575999319863" target="_blank">
-                            <p>(75) 99931-9862</p>
                         </a>
                     </div>
                     <div class="icon">
@@ -209,33 +415,17 @@
             </div>
         </div>
     </section>
-    <div class="modal hidden">
-        <div class="top">
-            <div class="video">
-                <iframe src="" frameborder="0" width="100%" height="100%" allowfullscreen ></iframe>
-            </div>
-            <div class="info">
-                <div class="title">
-                    <h2></h2>
-                    <i class="ri-close-line"></i>
-                </div>    
-                <p></p>
-                <span></span>
-            </div>
-        </div>
-        <div class="links">
-            <a href="" target="_blank" class="link-project">Acessar projeto</a>
-            <a href="" target="_blank" class="link-repository">Acessar repositório</a>
-            <a href="" target="_blank" class="link-linkedin">Ver post no Linkedin</a>
-        </div>
-    </div>
+
     <div class="menuOpen hidden">
-        <h2>Bem-vindo ao meu Portfólio :)</h2>
+        <h2><span data-l="en">Welcome to my portfolio :)</span><span data-l="pt">Bem-vindo ao meu portfólio :)</span></h2>
         <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contacts">Contatos</a>
+            <a href="#sobre"><span data-l="en">About</span><span data-l="pt">Sobre</span></a>
+            <a href="#experience"><span data-l="en">Experience</span><span data-l="pt">Experiência</span></a>
+            <a href="#stack"><span data-l="en">Toolbox</span><span data-l="pt">Ferramentas</span></a>
+            <a href="#qa-projects"><span data-l="en">QA projects</span><span data-l="pt">Projetos de QA</span></a>
+            <a href="#built"><span data-l="en">Products</span><span data-l="pt">Produtos</span></a>
+            <a href="#certifications"><span data-l="en">Certifications</span><span data-l="pt">Certificações</span></a>
+            <a href="#contacts"><span data-l="en">Contact</span><span data-l="pt">Contato</span></a>
         </nav>
     </div>
 
